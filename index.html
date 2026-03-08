@@ -3593,28 +3593,48 @@
             document.addEventListener('click', (e) => { if (!e.target.closest('.search-container')) document.getElementById('searchResults').classList.remove('active'); });
         });
     </script>
-   <script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
+<script type="module">
+        // استيراد مكتبات Firebase
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-analytics.js";
 
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyAVPDfxDHHRSeqqUIzipAFp4ioB6b5HdKU",
-    authDomain: "market-althad44.firebaseapp.com",
-    projectId: "market-althad44",
-    storageBucket: "market-althad44.firebasestorage.app",
-    messagingSenderId: "487491938454",
-    appId: "1:487491938454:web:d94706dcea40b0fc2efab7",
-    measurementId: "G-1YYVWQB2TC"
-  };
+        // إعدادات مشروعك الجديد (alethadmarket)
+        const firebaseConfig = {
+            apiKey: "AIzaSyC5mm4glh2cPKpkp65ImIpwIDYkckoj1fY",
+            authDomain: "alethadmarket.firebaseapp.com",
+            projectId: "alethadmarket",
+            storageBucket: "alethadmarket.firebasestorage.app",
+            messagingSenderId: "811498776119",
+            appId: "1:811498776119:web:4d3b9b3280947e4d6ec1b2",
+            measurementId: "G-K104YPRD60"
+        };
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-</script>
+        // تهيئة Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+
+        console.log("Firebase connected successfully to: " + firebaseConfig.projectId);
+
+        // انتظر تحميل الصفحة لتفعيل وظائف السلة والبحث
+        document.addEventListener('DOMContentLoaded', () => {
+            // هنا يمكنك إضافة منطق السلة الخاص بك المرتبط بـ Firebase مستقبلاً
+            document.getElementById('cartIcon').onclick = () => { 
+                document.getElementById('cartSidebar').classList.add('open'); 
+                document.getElementById('overlay').classList.add('active'); 
+            };
+            document.getElementById('overlay').onclick = () => { 
+                document.getElementById('cartSidebar').classList.remove('open'); 
+                document.getElementById('overlay').classList.remove('active'); 
+            };
+        });
+    </script>
+</body>
+</html>
+</body>
+</html>
+</body>
+</html>
+</body>
+</html>
 </body>
 </html>
